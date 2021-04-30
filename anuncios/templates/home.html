@@ -6,10 +6,13 @@
                     <div class=" wide column">
                         <div class="ui fluid card">
                             <div class="image">
-                                <img style="height: 150px;" src="http://127.0.0.1:8000/{{anun.imagem}}">
+                                <img style="height: 150px;" src="{{site}}{{anun.imagem}}">
                             </div>
                             <div class="content">
                             <a class="header">{{anun.titulo}}</a>
+                            </div>
+                            <div class="description">
+                                {{anun.descricao}}
                             </div>
                             <div class="extra content">
                                R$ {{anun.preco}}
