@@ -11,14 +11,13 @@
                             <div class="content">
                             <a class="header">{{anun.titulo}}</a>
                             </div>
-                            <div class="description">
-                                {{anun.descricao}}
-                            </div>
                             <div class="extra content">
                                R$ {{anun.preco}}
                             </div>
                         </div>
                     </div>
+                    {%empty%}
+                        <div class="ui fluid message">Nenhum anúncio foi encontrado!</div>
                     {%endfor%}
                 </div>
 {%endblock%}
