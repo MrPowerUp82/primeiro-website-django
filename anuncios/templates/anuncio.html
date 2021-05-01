@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block conteudo%}
+                <h1 class= "ui header">{{anuncio}}
+                    <div class="sub header">Anunciado em: {{anuncio.criado_em}}</div>
+                    <div class="sub header">Anunciado em: {{anuncio.alterado_em}}</div>
+                </h1>
+                <div class="ui grid">
+                    <div class="ui sixteen wide column">
+                        <div class="ui image">
+                            <img src="{{site}}{{anuncio.imagem}}">
+                        </div>
+                    </div>
+                    <div class="ui sixteen wide column">
+                        <h2 class="ui header">Preço: R$ {{anuncio.preco}}</h2>
+                        <h2 class="ui header">Descrição</h2>
+                        {%if anuncio.descricao%}
+                        <p>{{anuncio.descricao}}</p>
+                        {%else%}
+                        <p>Sem descrição!</p>
+                        {%endif%}
+                    </div>
+                </div>
+{%endblock%}

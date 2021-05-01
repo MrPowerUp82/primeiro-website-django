@@ -9,7 +9,7 @@
                                 <img style="height: 150px;" src="{{site}}{{anun.imagem}}">
                             </div>
                             <div class="content">
-                            <a class="header">{{anun.titulo}}</a>
+                            <a href="{%url 'anuncio' anun.id %}" class="header">{{anun.titulo}}</a>
                             </div>
                             <div class="extra content">
                                R$ {{anun.preco}}
