@@ -14,14 +14,16 @@
 </head>
 <body>
  <!-- Header -->
-<div class="ui container">
+<div class="ui">
     <div class="ui attached menu">
         <a href="{%url 'home' %}"class="item">Django Anuncios</a>
         <div class="right menu">
             <div class="ui category item aligned right search">
                 <div class="ui icon input">
-                  <input class="prompt" type="text" placeholder="Pesquisar...">
-                  <i class="search icon"></i>
+                    <form class="ui" action="{%url 'searchbar' %}" method="get">
+                        <input class="prompt" type="search" name="search" placeholder="Pesquisar...">
+                        <button class="ui basic button" type="submit"><i class="search icon"></i></button>
+                    </form>
                 </div>
                 <div class="results"></div>
             </div>
